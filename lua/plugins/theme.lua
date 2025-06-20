@@ -2,13 +2,7 @@ return {
   {
     'folke/tokyonight.nvim',
     lazy = false,
-    opts = {},
-    config = function()
-      vim.cmd.colorscheme 'storm'
-    end,
-  },
-  {
-    'folke/tokyonight.nvim',
+    priority = 1000, -- Make sure to load this before all the other start plugins
     config = function()
       require('tokyonight').setup {
         -- your configuration comes here
@@ -26,7 +20,9 @@ return {
           floats = 'dark', -- style for floating windows
         },
       }
+
+      -- Load the colorscheme after setup
+      vim.cmd.colorscheme 'tokyonight-storm'
     end,
   },
 }
-
