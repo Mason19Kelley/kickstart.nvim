@@ -893,6 +893,7 @@ require('lazy').setup({
   -- you can continue same window with `<space>sr` which resumes last telescope search
   require 'plugins.theme',
   require 'plugins.tailwind-tools',
+  require 'plugins.git',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
